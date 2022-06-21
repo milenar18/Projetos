@@ -1,0 +1,30 @@
+package Estrutura_de_Dados;
+
+import java.util.Scanner;
+
+public class fibonacci {
+    static long fibo(int n) {
+        if (n < 2) {
+            return n;
+        } else {
+            return fibo(n - 1) + fibo(n - 2);
+        }
+    }
+
+    public static void main(String[] args) {
+    
+    Scanner dado = new Scanner(System.in);
+    int n;
+    
+    System.out.println("Digite um número");
+    n = dado.nextInt();
+    
+	for (int i = 0; i < 10; i++) {
+		int f = (int) fibonacci.fibo(i);
+		  if(n == f)
+            System.out.println(f + ": sim");
+		  else
+			  System.out.println(f + ": não");
+        }
+    }
+}
